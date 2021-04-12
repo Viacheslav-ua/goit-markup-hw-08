@@ -1,0 +1,41 @@
+// Герой _________________ 
+
+.hero {
+    text-align: center;
+    background-color: $iconColor;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  }
+  
+  .hero__overlay {
+    display: flex;
+    align-items: center;
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+    & .container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  .hero__content {
+    width: calc(100% / 12 * 7);
+  }
+  
+  .hero__title {
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: white;
+    }

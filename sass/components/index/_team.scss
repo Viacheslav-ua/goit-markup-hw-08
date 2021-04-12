@@ -1,0 +1,68 @@
+.team {
+    background-color: $bgColor;
+  }
+  
+  .team__item {
+    --grid-item: 4;
+    text-align: center;
+    padding-bottom: 30px;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  .team__img {
+    margin-bottom: 30px;
+  }
+  
+  .team__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    margin-bottom: 10px;
+  }
+  
+  .team__text {
+    font-size: 16px;
+    line-height: 1.19;
+    color: $secondaryColor;
+    margin-bottom: 16px;
+  }
+
+  .team-social__list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  
+  .team-social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
+  
+    &:hover,
+    &:focus {
+      background-color: $accentColor;
+    }
+}
+
+.team-social__icon {
+    fill: $iconColor;
+  
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
+  
+    .team-social__link:hover &,
+    .team-social__link:focus & {
+      fill: white;
+    }
+}

@@ -1,0 +1,141 @@
+// Правила для footer _____________________
+.page-footer {
+  background-color: $bgDarkColor;
+  height: 252px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__logo {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.page-footer__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+}
+
+// Реквизиты _____________________________
+.requisites {
+  padding-top: 60px;
+  width: calc((50% - 45px) / 2);
+}
+
+.requisites__link {
+  line-height: 1.71;
+  color: white;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.contacts-link {
+  line-height: 1.71;
+  color: $halfToneColor;
+  margin-top: 9px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+// Соцсети ______________________________
+.social {
+  padding-top: 72px;
+  width: calc((50% - 45px) / 2);
+}
+
+.social__list {
+  display: flex;
+  .social__item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}
+
+.social__icon {
+  fill: white;
+}
+
+// Подписка на рассылку _________________
+.mailing__blok {
+  padding-top: 72px;
+  width: calc(50% - 15px);
+}
+
+.filed-mail {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  background-color: var(--bgc-dark);
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  &::placeholder {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.mailing__form {
+  display: flex;
+  flex-direction: row;
+  & button {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.mailing__icon {
+  margin-left: 10px;
+}

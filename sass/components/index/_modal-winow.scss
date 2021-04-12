@@ -1,0 +1,226 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.order-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 528px;
+  min-height: 581px;
+  transform: scale(1) translate(-50%, -50%);
+
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+
+  & .order-modal {
+    transform: scale(0);
+
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+  }
+}
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.close-btn:hover .close-btn__icon {
+  fill: $accentColor;
+}
+
+.user-data-form {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 40px;
+
+  label {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $secondaryColor;
+  }
+}
+
+.order-modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.order-modal__icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.order-modal__filed {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 10px;
+
+  & label {
+    margin-bottom: 4px;
+  }
+}
+
+.order-modal__filed input {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 42px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
+  &:focus {
+    border-color: $accentColor;
+    outline: none;
+  }
+}
+
+.order-modal__comment {
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    border-color: $accentColor;
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.user-data-form input:focus + .order-modal__icon {
+  fill: $accentColor;
+}
+
+.order-modal__check label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  
+  .order-modal_checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+  }
+
+  .check-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    border: 2px solid $basicColor;
+    border-radius: 2px;
+    background-color: white;
+    background-image: url();
+  
+    transition-property: border, background-color, background-image;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
+  }
+  
+  .order-modal_checkbox:checked + .check-icon {
+    border: none;
+    background-color: $accentColor;
+    background-image: url(../images/icons/check.svg);
+  }
+
+  .accord {
+    margin-left: 4px;
+    color: $accentColor;
+  }
+  
+  .user-data-form .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }

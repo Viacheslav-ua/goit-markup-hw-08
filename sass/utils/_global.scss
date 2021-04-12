@@ -1,0 +1,74 @@
+// Переменные
+:root {
+  --grid-item: 1;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+//   Глобальные правила _____________________
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: $fontMain;
+  font-size: 14px;
+  background-color: white;
+  color: $basicColor;
+  letter-spacing: 0.03em;
+}
+
+textarea {
+  resize: none;
+}
+
+.link {
+  font-style: normal;
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.text-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}

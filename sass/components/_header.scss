@@ -1,0 +1,106 @@
+//   Правила для header _______________________
+.page-header {
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.page-header__logo {
+  color: black;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+  height: 80px;
+
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: inherit;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.current {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: $accentColor;
+  height: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border: solid 2px $accentColor;
+    border-radius: 2px;
+  }
+}
+
+.address {
+  display: flex;
+  margin-left: auto;
+}
+
+.address__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.address__link {
+  display: flex;
+  align-items: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: $secondaryColor;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.address__icon {
+  margin-right: 10px;
+  fill: $iconColor;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
+  .address__link:hover &,
+  .address__link:focus & {
+    fill: $accentColor;
+  }
+}
