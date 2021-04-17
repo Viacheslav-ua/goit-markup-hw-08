@@ -1,27 +1,16 @@
 // Правила для features _______________
 
 .features__item {
-    @media screen and ($mob) {
-      --grid-item: 1;
-    }
-
-    @media screen and ($tab) {
-      --grid-item: 2;
-    }
-
-    @media screen and ($dsk) {
-      --grid-item: 4;
-    }
+    --grid-item: 4;
   }
 
- .features__blok {
+.features__blok {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 120px;
     margin-bottom: 30px;
     background-color: $bgColor;
-
   }
 
   .features__title {
@@ -30,9 +19,6 @@
     line-height: 1.14;
     text-transform: uppercase;
     margin-bottom: 10px;
-    @media screen and ($mob) {
-      text-align: center;
-    }
   }  
 
   .features__text {
@@ -42,7 +28,4 @@
 
   .section.features {
     padding-bottom: 0;
-    @media screen and (max-width: 769px) {
-      padding-bottom: 60px;
-    }
   }

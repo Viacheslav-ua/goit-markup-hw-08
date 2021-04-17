@@ -1,10 +1,27 @@
 //   Правила для header _______________________
 .page-header {
-  display: flex;
   border-bottom: 1px solid #ececec;
+  @media screen and ($dsk) {
+    display: flex;
+    .container {
+      height: 80px;
+      justify-content: flex-start;
+    }
+  }
+  @media screen and ($head-tab) {
+    .container {
+      height: 80px;
+      justify-content: space-between;
+    }
+  }
+  @media screen and ($head-mob) {
+    .container {
+      height: 60px;
+      justify-content: space-between;
+    }
+  }
   .container {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
   }
 }
@@ -13,10 +30,29 @@
   color: black;
 }
 
+.page-header .close-btn {
+  @media screen and (min-width: 660px) {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+.nav {
+  @media screen and ($head-mob) {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
 .site-nav {
   display: flex;
   align-items: center;
-  margin-left: 93px;
+  @media screen and ($dsk) {
+    margin-left: 93px;
+  }
+
   height: 80px;
 
   .site-nav__item:not(:last-child) {
@@ -64,12 +100,28 @@
 
 .address {
   display: flex;
-  margin-left: auto;
+
+  @media screen and ($head-mob) {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+  @media screen and ($head-tab) {
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  @media screen and ($dsk) {
+    margin-left: auto;
+    .address__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
-.address__item:not(:last-child) {
-  margin-right: 50px;
-}
+// .address__item:not(:last-child) {
+//   margin-right: 50px;
+// }
 
 .address__link {
   display: flex;
@@ -102,5 +154,136 @@
   .address__link:hover &,
   .address__link:focus & {
     fill: $accentColor;
+  }
+}
+
+.page-header__btn {
+  display: none;
+  // opacity: 0;
+  //   pointer-events: none;
+
+  @media screen and ($head-mob) {
+    display: block;
+    // opacity: 1;
+    //   pointer-events: visible;
+    border: none;
+    background-color: transparent;
+    padding-top: 6px;
+  }
+}
+
+.page-header__icon {
+  .page-header__btn:hover &,
+  .page-header__btn:focus & {
+    fill: $accentColor;
+  }
+}
+@media screen and ($head-mob) {
+  .hidden-itm {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+
+  }
+  .show-itm {
+    opacity: 1;
+    pointer-events: visible;
+    display: block;
+  }
+}
+
+.page-header__soc {
+  @media screen and (min-width: 660px) {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+.show-header {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  
+  .container {
+    height: 100%;
+    padding-left: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    .close-btn {
+      border: none;
+      margin-right: 15px;
+      margin-top: 10px;
+    }
+
+    .site-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      
+      .current::after {
+        display: none;
+
+      }
+    }
+
+    .address {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: auto;
+      margin-bottom: 64px;
+    }
+    .address__mail {
+      margin-top: 18px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.16;
+      letter-spacing: 0.02em;
+      color: $secondaryColor;
+    }
+    .address__tel {
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      color: $accentColor;
+    }
+    .address__icon {
+      display: none;
+    }
+
+    
+    
+    .page-header__soc {
+      display: flex;
+
+      & > li:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.3);
+      }
+
+      & > li:not(:first-child) {
+        padding-left: 10px;
+        // border-left: 1px solid #000;
+      }
+      
+      .page-header__link {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        color: $accentColor;
+       
+      }
+    }
   }
 }

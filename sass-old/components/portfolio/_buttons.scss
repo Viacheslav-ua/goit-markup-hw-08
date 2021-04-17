@@ -1,12 +1,8 @@
 /*------------- buttons */
 .buttons-block {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 50px;
-  @media screen and (max-width: 645px) {
-    justify-content: start;
-  }
 }
 
 .buttons-block > li:last-child .button {
@@ -24,10 +20,6 @@
   line-height: 1.62;
   letter-spacing: 0.03em;
   margin-right: 8px;
-  @media screen and (max-width: 645px) {
-    margin-bottom: 15px;
-  }
-  
 
   transition-property: background-color, cursor, color, box-shadow;
   transition-duration: 250ms;

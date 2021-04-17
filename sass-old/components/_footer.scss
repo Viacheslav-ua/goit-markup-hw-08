@@ -1,29 +1,15 @@
 // Правила для footer _____________________
 .page-footer {
   background-color: $bgDarkColor;
-  @media ($dsk) {
-    height: 252px;
-    .container {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
+  height: 252px;
 
-  @media ($tab) {
-    .container {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-  }
-
-  @media ($mob) {
-    padding: 60px 15px;
+  .container {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 .page-footer__logo {
-  display: block;
   color: white;
   margin-bottom: 20px;
 }
@@ -40,21 +26,8 @@
 
 // Реквизиты _____________________________
 .requisites {
-  // padding-top: 60px;
-  @media ($dsk) {
-    padding-top: 60px;
-    width: calc((50% - 45px) / 2);
-  }
-
-  @media ($tab) {
-    padding-top: 60px;
-    text-align: center;
-  }
-
-  @media ($mob) {
-    width: 100%;
-    text-align: center;
-  }
+  padding-top: 60px;
+  width: calc((50% - 45px) / 2);
 }
 
 .requisites__link {
@@ -88,29 +61,12 @@
 
 // Соцсети ______________________________
 .social {
-  @media ($dsk) {
-    padding-top: 72px;
-    width: calc((50% - 45px) / 2);
-  }
-
-  @media ($tab) {
-    padding-top: 65px;
-    text-align: center;
-  }
-
-  @media ($mob) {
-    margin-top: 60px;
-    width: 100%;
-    text-align: center;
-  }
+  padding-top: 72px;
+  width: calc((50% - 45px) / 2);
 }
 
 .social__list {
   display: flex;
-  @media ($mob) {
-    justify-content: center;
-  }
-
   .social__item:not(:last-child) {
     margin-right: 10px;
   }
@@ -144,49 +100,12 @@
 
 // Подписка на рассылку _________________
 .mailing__blok {
-  @media ($dsk) {
-    padding-top: 72px;
-    // width: calc(50% - 15px);
-  }
-
-  @media ($tab) {
-    margin-top: 60px;
-    text-align: center;
-  }
-
-  @media ($mob) {
-    margin-top: 60px;
-    width: 100%;
-    text-align: center;
-  }
+  padding-top: 72px;
+  width: calc(50% - 15px);
 }
 
 .filed-mail {
-  @media (min-width: 769px) {
-    width: 130px;
-  }
-
-  @media (min-width: 869px) {
-    width: 200px;
-  }
-
-  @media (min-width: 1000px) {
-    width: 300px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 358px;
-  }
-
-  @media ($tab) {
-    width: 450px;
-    margin-bottom: 20px;
-  }
-
-  @media ($mob) {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+  width: 358px;
   height: 50px;
   margin-right: 12px;
   background-color: var(--bgc-dark);
@@ -210,26 +129,10 @@
 
 .mailing__form {
   display: flex;
-  @media ($dsk) {
-    flex-direction: row;
-  }
-  @media ($tab) {
-    flex-direction: column;
-    align-items: center;
-    & button {
-      margin-bottom: 60px;
-    }
-  }
-
-  @media ($mob) {
-    flex-direction: column;
-    align-items: center;
-  }
-
+  flex-direction: row;
   & button {
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 }
 

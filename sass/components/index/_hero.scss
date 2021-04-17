@@ -1,41 +1,91 @@
-// Герой _________________ 
+// Герой _________________
 
 .hero {
-    text-align: center;
-    background-color: $iconColor;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
-  }
+  text-align: center;
+     background-color: $iconColor;
+    background-image: linear-gradient(to right, $overlayColor, $overlayColor);
+}
+
+.hero__overlay {
+   display: flex;
+   align-items: center;
   
-  .hero__overlay {
+  margin-left: auto;
+  margin-right: auto;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and ($mob) {
+    height: 400px;
+    background-image: linear-gradient(to right, $overlayColor, $overlayColor), url(../images/bg/hero-mob.jpg);
+  }
+  // ---------------------------------------
+  @media screen and (min-width: 768px) {
+  //  width: 768px;
+  }
+
+  @media screen and ($tab) {
+    height: 400px;
+     background-image: linear-gradient(to right, $overlayColor, $overlayColor), url(../images/bg/hero-tab.jpg);
+  }
+  // ---------------------------------------------
+
+  @media screen and ($dsk) {
+     width: 100%;
+     height: 600px;
+     background-image: linear-gradient(to right, $overlayColor, $overlayColor), url(../images/bg/hero-bg.jpg);
+  }
+  // ------------------------------------------
+
+   @media screen and (min-width: 1600px) {
+     width: 1600px;
+  }
+
+  & .container {
     display: flex;
-    align-items: center;
-    max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  
-    & .container {
-      display: flex;
-      justify-content: center;
-    }
+    justify-content: center;
   }
-  
-  .hero__content {
+}
+
+
+.hero__content {
+  @media screen and (min-width: 400px) and (max-width: 768px) {
+    width: 360px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 607px;
+  }
+  @media screen and (min-width: 1070px) {
     width: calc(100% / 12 * 7);
   }
-  
-  .hero__title {
-      margin-top: 0;
-      margin-bottom: 30px;
-      font-weight: 900;
-      font-size: 44px;
-      line-height: 1.36;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: white;
-    }
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: white;
+
+  @media ($mob) {
+    font-size: 26px;
+    line-height: 1.61;
+  }
+
+  @media ($tab) {
+    font-size: 26px;
+    line-height: 1.61;
+  }
+
+  @media ($dsk) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}

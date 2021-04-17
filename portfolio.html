@@ -14,27 +14,32 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header" data-header>
       <div class="container">
-        <a href="./" class="link logo page-header__logo"><span class="logo--color">Web</span>Studio</a>
-        <nav>
+        <a href="./" class="link logo page-header__logo hidden-itm show-itm" data-logo><span class="logo--color">Web</span>Studio</a>
+        <button type="button" class="close-btn hidden-itm" data-btn-close data-menu-close aria-label="кнопка закрыть окно">
+          <svg class="close-btn__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="nav hidden-itm" data-nav>
           <ul class="list site-nav">
             <li class="site-nav__item"><a href="./" class="link site-nav__link">Студия</a></li>
-            <li class="site-nav__item current"><a href="./portfolio.html" class="link site-nav__link">Портфолио</a></li>
+            <li class="site-nav__item current "><a href="./portfolio.html" class="link site-nav__link">Портфолио</a></li>
             <li class="site-nav__item"><a href="" class="link site-nav__link">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="list address">
+        <ul class="list address hidden-itm" data-address>
           <li class="address__item">
-            <a href="mailto:info@devstudio.com" class="link address__link">
+            <a href="mailto:info@devstudio.com" class="link address__link address__mail">
               <svg class="address__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
-              <span>@devstudio.com</span>
+              <span>info@devstudio.com</span>
             </a>
           </li>
           <li class="address-item">
-            <a href="tel:+380961111111" class="link address__link">
+            <a href="tel:+380961111111" class="link address__link address__tel">
               <svg class="address__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
@@ -42,6 +47,26 @@
             </a>
           </li>
         </ul>
+        <ul class="list page-header__soc hidden-itm" data-soc>
+         <li class="page-header__item">
+           <a href="" class="link page-header__link">Instagram</a>
+         </li>
+         <li class="page-header__item">
+           <a href="" class="link page-header__link">Twitter</a>
+         </li>
+         <li class="page-header__item">
+           <a href="" class="link page-header__link">Facebook</a>
+         </li>
+         <li class="page-header__item">
+           <a href="" class="link page-header__link">LinkedIn</a>
+         </li>
+        </ul>
+          
+        <button type="button" class="page-header__btn hidden-itm show-itm" data-btn-menu data-menu-open aria-label="кнопка открыть окно меню">
+          <svg class="page-header__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -262,5 +287,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

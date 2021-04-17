@@ -1,9 +1,7 @@
 // Переменные
 :root {
   --grid-item: 1;
-  // --flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 //   Глобальные правила _____________________
@@ -47,30 +45,12 @@ textarea {
 }
 
 .container {
-  // @media screen and (min-width: 480px) {
-  //   width: 480px;
-  //   // background-color: rosybrown;
-  // }
-
-  @media screen and (min-width: 768px) {
-    width: 100%;
-    // background-color: salmon;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-    // background-color:seagreen;
-  }
-
+  width: 1200px;
   padding: 0 15px;
-
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .section {
-  // display: flex;
-  // justify-content: center;
   padding: 94px 0;
 }
 

@@ -1,12 +1,5 @@
 // Правила для operation ________________
 
-.operation {
-  display: none;
-  @media screen and ($dsk) {
-     display: block;
-  }
-}
-
 .operation__item {
     --grid-item: 3;
   }
