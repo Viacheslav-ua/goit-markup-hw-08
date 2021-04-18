@@ -14,7 +14,7 @@
 
   (()=>{
     document
-      .querySelector('.mailing-form')
+      .querySelector('.mailing__form')
       .addEventListener('submit', e => {
         e.preventDefault();
 

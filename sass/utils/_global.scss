@@ -3,7 +3,6 @@
   --grid-item: 1;
   // --flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 //   Глобальные правила _____________________
@@ -47,19 +46,14 @@ textarea {
 }
 
 .container {
-  // @media screen and (min-width: 480px) {
-  //   width: 480px;
-  //   // background-color: rosybrown;
-  // }
-
+  min-width: 320px;
+ 
   @media screen and (min-width: 768px) {
-    width: 100%;
-    // background-color: salmon;
+     width: 100%;
   }
 
   @media screen and (min-width: 1200px) {
-    width: 1200px;
-    // background-color:seagreen;
+    max-width: 1200px;
   }
 
   padding: 0 15px;
@@ -69,8 +63,6 @@ textarea {
 }
 
 .section {
-  // display: flex;
-  // justify-content: center;
   padding: 94px 0;
 }
 
